@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>three.js tutorial</title>
+	<!-- <canvas id="bird_eye" width="300" height="200" style="border:1px solid #000000;"></canvas> -->
+	<script>
+		function LoadGame() {
+			var script = document.createElement("script");
+			script.type = "text/javascript";
+			script.src = "http://localhost:8080/dist/main.js";
+			document.getElementsByTagName("head")[0].appendChild(script);
+
+			document.querySelector(".button").remove();
+			// document.getElementById("graphic").remove();
+
+			const para = document.createElement("p");
+			para.innerHTML = "This is a paragraph";
+			para.id = "paragraph"
+			document.getElementsByTagName("body")[0].appendChild(para);
+		}
+	</script>
+	<style>
+		body {
+			margin: 0;
+			background-image: url("http://localhost:8080/src/assets/StartScreen.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+		}
+
+		.button {
+			box-align: center;
+			width: 500px;
+			height: 40px;
+			background-color: rgb(241, 146, 14);
+			color: black;
+			border-radius: 10px;
+			position: absolute;
+			top: 13%;
+			left: 30%;
+		}
+
+		.Sub {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		#paragraph {
+			position: absolute;
+			top: 90%;
+			left: 10%;
+			size: 30px;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="Main">
+		<div class="Sub">
+			<!-- <canvas id="bird_eye" width="300" height="200" bottom="0" right="0" --
+			 style="border:1px solid #000000;"></canvas> -->
+		</div>
+	</div>
+	<button class="button" onclick="LoadGame()">START SCREEN</button>
+</body>
+<!-- <script src="http://localhost:8080/dist/main.js"></script> -->
+
+</html>
